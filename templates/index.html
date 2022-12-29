@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+      <head>
+             <meta charset="UTF-8">
+             <link rel="stylesheet" href="/static/css/style.css">
+             <title>東京電機大学</title>
+      </head>
+      <body>
+          <h2>セキュリティ研究室の鎌田啓輔です</h1>
+              <p class="border">東京電機大学に所属しています</p>
+          <p class="margin">北千住駅の近くにあります</p>
+          <p>Hello, World!<p>
+
+              <ul>
+              {% for x in list %} <!--リスト表示-->
+                     <li>{{x}}</li>
+              {% endfor %}
+              </ul>
+              
+              <p>{{dictionary}}<p> 
+
+              {%if judge%} 
+                     <p>判定は有ります</p>
+              {% endif %}
+
+          <a href="/jinja">Let's go to index_jinja.html</a> 
+          
+          <h1>form送信</h1>
+                     <form action="/form" method="POST">
+                            <input name="data"></input>
+                            <button type="submit">送信</button>
+                     </form>
+       </body>
+</html>
